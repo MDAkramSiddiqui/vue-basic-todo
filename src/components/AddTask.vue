@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     addNewTask(stateTitle) {
-      Store.addNewTask(stateTitle);
+      if (stateTitle.length) Store.addNewTask(stateTitle);
       this.title = "";
     },
   },
